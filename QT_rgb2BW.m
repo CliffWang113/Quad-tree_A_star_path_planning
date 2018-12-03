@@ -1,11 +1,11 @@
-function[BW] = QT_rgb2BW(I,length)
+function[BW] = QT_rgb2BW(I,L)
 
-I = I(1:length,1:length,:);
+I = I(1:L,1:L,:);
 
-BW = zeros(length,length);
+BW = zeros(L,L);
 
-for i = 1:length
-    for j = 1:length
+for i = 1:L
+    for j = 1:L
         if I(i,j,3) > 240
            BW(i,j) = true;
         else
