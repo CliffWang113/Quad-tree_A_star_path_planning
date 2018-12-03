@@ -1,13 +1,13 @@
-I = imread('Boston_shore');
+I = imread('Boston_shore.png');
 
 L = 1024;
 
-I = I(1:L,1:L,:);
+I = I(1:1024,1:1024,:);
 BW = QT_rgb2BW(I,L);
 
 S = qtdecomp(BW,0.015);
 
-blocks = zeros(L,L);
+blocks = repmat(uint8(0),size(S));
 
 QTgrid = full(S);
 
