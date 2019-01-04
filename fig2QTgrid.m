@@ -19,10 +19,10 @@ for i = 1:L
                 temp(2:diag-1,2:diag-1) = 1;
                 QTgraph(i:i+diag-1,j:j+diag-1) = temp;
               elseif diag == 2
-                temp = zeros(diag,diag);
-                QTgraph(i:i+diag-1,j:j+diag-1) = temp;
+                temp = ones(diag,diag);
+                QTgraph(i:i+1,j:j+1) = temp;
               else
-                QTgraph(i,j) = 0;
+                QTgraph(i,j) = 1;
               end
           end
       end

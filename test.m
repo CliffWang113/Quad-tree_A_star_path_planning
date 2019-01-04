@@ -7,14 +7,15 @@ draw_grid(leafnode)
 
 %%
 I = imread('Boston_shore.png');
-BW = QT_rgb2BW(I);
+BW = QT_rgb2BW(I,1024);
 
 %%
 I = imread('Boston_shore.png');
 
-L = 1024;
+L = 256;
 
-I = I(1:L,1:L,:);
+I = I(300:300+L-1,500:500+L-1,:);
+%I = I(1:1024,1:1024,:);
 BW = QT_rgb2BW(I,L);
 
 [QTgraph,QTgrid] = fig2QTgrid(BW,L);
